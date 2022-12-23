@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Medium.ttf);
+}
+
+:root {
+    --background-c: #cdcecf;
+    --border-c: #6f6f6f44;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-c);
+    font-family: Poppins, sans-serif;
+}
+
+.header {
+    height: auto;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--border-c);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.header__logo img {
+    height: 40px;
+}
+
+.header__menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header__menu ul li {
+    transition: .5s ease;
+}
+
+.header__menu ul li:hover {
+    transform: translateY(-2px);
+}
+
+.menu-item:not(:first-child) {
+    margin-left: 40px;
+}
+
+.header__menu a {
+    font-size: 1.1em;
+    cursor: pointer;
+    color: #00222f;
+}
+
+.header__menu a:hover {
+    color: #ffffff;
+}
+
+
+
+
+
+.main {
+    height: calc(100vh - 58px);
+    padding: 80px 0 0 40px;
+}
+
+.main-title {
+    width: 70%;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 130%;
+    color: #191B1D;
+    margin-bottom: 160px;
+}
+
+.main-title span {
+    color: white;
+}
+
+.main-subtitle {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10rem;
+    margin: 1rem;
+    align-items: center;
+}
+
+.main-subtitle img {
+    width: 20em;
+    animation: animate 120s infinite ease;
+}
+
+@media (max-width: 992px) {
+    .main-text { grid-row: 1;}
+
+    .main-title {
+        margin-bottom: 100px;
+    }
+
+    .main-subtitle {
+        grid-gap: 2rem;
+    }
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.main-text {
+    font-size: 20px;
+    line-height: 130%;
+    color: #191B1D;
+    margin-bottom: 40px;
+    max-width: 502px;
+}
+
+
+.info {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: calc(100% - 100px);
+}
