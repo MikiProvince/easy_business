@@ -63,7 +63,7 @@ body {
 }
 
 .header__menu a {
-    font-size: 1.1em;
+    font-size: 1em;
     cursor: pointer;
     color: #00222f;
 }
@@ -107,12 +107,10 @@ body {
     animation: animate 120s infinite ease;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .main-text { grid-row: 1;}
 
-    .main-title {
-        margin-bottom: 100px;
-    }
+    .main-title {margin-bottom: 60px; font-size: 60px;}
 
     .main-subtitle {
         grid-gap: 2rem;
